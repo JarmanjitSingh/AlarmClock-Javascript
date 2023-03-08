@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alarm Clock</title>
+</head>
+<body class="flex">
+
+    <div id="container" class="flex-col">
+
+        <div id="img">
+            <img src="img/clock.png" alt="clock" id="clock">
+        </div> 
+
+        <h1>Current Time</h1>
+        <div id="currentTime" class="flex">
+            <div id="hour" class="flex">
+                
+            </div> <span class="colon">:</span>
+            <div id="minute" class="flex">
+                
+            </div> <span class="colon">:</span>
+            <div id="second" class="flex">
+                
+            </div>
+        </div>
+        
+        <h1>Set Alarm</h1>
+        <div id="alarmSet" class="flex"></div>
+
+        <div id="timerContainer" class="flex">
+            Alarm Ring after: <span id="reverseTime" class="flex">--</span> Seconds
+        </div>
+
+        <div id="stop" class="flex">STOP</div>
+        
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>

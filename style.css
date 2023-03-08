@@ -1,0 +1,196 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-image: linear-gradient(to right, #ffd89b, #19547b);
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    position: relative;
+}
+
+
+/******************** Utility classes  *******************/
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/******************** container  *******************/
+
+#container {
+    min-height: 70%;
+    min-width: 60%;
+    border: 4px solid #383858;
+    border-radius: 15px;
+    padding: 30px;
+    gap: 10px;
+}
+#container::before{
+    filter: blur(1);
+}
+
+img {
+    height: 80px;
+    width: 80px;
+}
+
+h1{
+    text-align: center;
+    color: #f8c755;
+}
+
+div#currentTime {
+    min-width: 80%;
+    padding: 10px;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+#hour,
+#minute,
+#second {
+    height: 89px;
+    width: 24%;
+    font-size: 50px;
+    box-shadow: 1px 2px 17px #ffff;
+    border-radius: 15px;
+}
+
+.colon{
+    font-size: 50px;
+}
+
+div#alarmSet{
+    width: 80%;
+    padding: 10px;
+    gap: 20px;
+}
+
+.input{
+    height: 30px;
+    width: 14%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: none;
+    box-shadow: 1px 2px 17px #ffff;
+    cursor: pointer;
+    text-align: center;
+}
+
+#btn{
+    height: 27px;
+    width: 74px;
+    border-radius: 6px;
+    border: none;
+    background: none;
+    box-shadow: 1px 2px 17px #ffff;
+    background-image: linear-gradient(to right, #ffd89b, #19547b);
+    cursor: pointer;
+}
+
+#btn:hover{
+    background-image: linear-gradient(to right, #19547b, #ffd89b);
+    color: white;
+}
+
+#timerContainer{
+    width: 80%;
+    height: 50px;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+#reverseTime{
+    height: 30px;
+    min-width: 14%;
+    background: transparent;
+    border-radius: 10px;
+    margin: 0 13px;
+    font-size: 1.3rem;
+    box-shadow: 2px 1px 8px 0px;
+}
+
+/******************** animation on alarm  *******************/
+
+.ring{
+    animation-name: ringing;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ringing {
+    0%   {transform: rotate(0deg);}
+    10%  {transform: rotate(-25deg);}
+    20%  {transform: rotate(25deg);}
+    30%  {transform: rotate(-25deg);}
+    40%  {transform: rotate(5deg);}
+    50%  {transform: rotate(5deg);}
+    60%  {transform: rotate(5deg);}
+    70%  {transform: rotate(4deg);}
+    80%  {transform: rotate(3deg);}
+    90%  {transform: rotate(2deg);}
+    100% {transform: rotate(0deg);}
+}
+
+  #stop{
+      display: none;
+      height: 75px;
+      width: 80px;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      background-image: linear-gradient(to right, #19547b, #ffd89b);
+      cursor: pointer;
+      box-shadow: 1px 2px 17px #ffff;
+    }
+    
+    /******************** Responsive design *******************/
+
+    @media screen and (max-width: 677px){
+        #container {
+            min-width: 67%;
+        }
+        #timerContainer {
+            font-size: 1.2rem;
+        }
+        div#currentTime, div#alarmSet, #timerContainer{
+            min-width: 90%;
+        }
+        #hour, #minute, #second {
+            font-size: 33px;
+        }
+        .input{
+            width: 17%;
+        }
+        #reverseTime {
+            height: 15px;
+            padding: 5px;
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 459px){
+        .input {
+            width: 25%;
+        }
+        #timerContainer {
+            font-size: 1rem;
+        }
+        
+    }
+
